@@ -46,6 +46,15 @@ export class AppComponent {
     console.log('task added')
   }
 
+  filterList(todo:Todo){
+    if(this.userEntry == ""){
+      return true;
+    }
+    else if(todo.title.toUpperCase().includes(this.userEntry.toUpperCase())){
+      return true;
+    }
+    return false;
+  }
 
 }
 

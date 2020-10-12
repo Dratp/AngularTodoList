@@ -3,6 +3,7 @@
 <input type="text" placeholder="Add a task..." [(ngModel)]="userEntry" />
 <button (click)="addTask()">Add</button>
   <div *ngFor="let todo of todoList">
+    <div *ngIf="filterList(todo)">
         <div *ngIf="todo.complete">
           <input (change)="completeTask(todo)" type="checkbox" />
           <span class="is-complete">  
@@ -15,6 +16,7 @@
             <input [(ngModel)]= "todo.title" placeholder="title"  />
           <button (click)=Delete(todo)>x</button>
         </div>
+    </div>
   </div>
 </div>
 
