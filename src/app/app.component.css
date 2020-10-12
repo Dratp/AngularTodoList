@@ -1,0 +1,10 @@
+.todo {
+    background: #f4f4f4;
+    padding: 10px;
+    
+}
+
+.is-complete {
+    text-decoration: line-through;
+}
+
