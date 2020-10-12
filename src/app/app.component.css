@@ -1,10 +1,70 @@
 .todo {
     background: #f4f4f4;
     padding: 10px;
-    
+
 }
 
 .is-complete {
     text-decoration: line-through;
 }
 
+.box
+{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 500px;
+    padding:20px;
+    background: #000;
+    color:#fff;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,1);
+    border-radius: 5px;
+    overflow:hidden;
+}
+
+.del{
+    position: relative;
+    background: none;
+    width:24px;
+    height: 24px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 24px;
+    transition: 0.5s;
+}
+.del:hover{
+    background: #ec0b36 url(pixel.png);
+}
+
+
+.comptitle{
+    background: greenyellow;
+    text-decoration: line-through;
+}
+
+.box label input
+{
+    display:none;
+}
+.box label span
+{
+    position: relative;
+    display:inline-block;
+    width: 70px;
+    padding: 2px;
+    background: #000;
+    border: 1px solid #444;
+    color: #444;
+    border-radius: 7px;
+}
+
+
+#complete {
+    color: #62ff00;
+    border: 1px solid #62ff00;
+    border-color: #62ff00;
+}

@@ -1,20 +1,24 @@
-<div>
+<div class="box">
   <h1>Honey Do List</h1>
 <input type="text" placeholder="Add a task..." [(ngModel)]="userEntry" />
 <button (click)="addTask()">Add</button>
   <div *ngFor="let todo of todoList">
     <div *ngIf="filterList(todo)">
         <div *ngIf="todo.complete">
-          <input (change)="completeTask(todo)" type="checkbox" />
-          <span class="is-complete">  
-            <input [(ngModel)]= "todo.title" placeholder="title"  />
-          </span>
-          <button (click)=Delete(todo)>x</button>
+          <label>
+            <input (change)="completeTask(todo)" type="checkbox" />
+            <span id="complete">complete</span>
+          </label>
+            <input [(ngModel)]= "todo.title" placeholder="title" class="comptitle" />
+          <button (click)=Delete(todo) class="del">x</button>
         </div>  
         <div *ngIf="!todo.complete">
-          <input (change)="completeTask(todo)" type="checkbox" />
+          <label>
+            <input (change)="completeTask(todo)" type="checkbox" />
+            <span>complete</span>
+          </label>
             <input [(ngModel)]= "todo.title" placeholder="title"  />
-          <button (click)=Delete(todo)>x</button>
+          <button (click)=Delete(todo) class="del">x</button>
         </div>
     </div>
   </div>
