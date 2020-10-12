@@ -44,6 +44,7 @@ export class AppComponent {
   addTask(){
     this.todoList.push( {title: this.userEntry, complete: false });
     console.log('task added')
+    this.userEntry = "";
   }
 
   filterList(todo:Todo){
