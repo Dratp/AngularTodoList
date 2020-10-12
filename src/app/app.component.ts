@@ -20,7 +20,6 @@ export class AppComponent {
     {title: 'Eat Dinner', complete:false}
   ]
 
-  numTodo = this.todoList.length;
 
   completeTask(todo:Todo){
     console.log(`${todo.title}Completed`);
@@ -28,11 +27,11 @@ export class AppComponent {
     console.log(`${todo.complete}`);
      if (todo.complete){
        this.alldone++;
-        console.log(`tasks done ${this.alldone} total tasks:${this.numTodo}`);
+        console.log(`tasks done ${this.alldone} total tasks:${this.todoList.length}`);
      }
      else {
        this.alldone--;
-        console.log(`tasks done ${this.alldone} total tasks:${this.numTodo}`);
+        console.log(`tasks done ${this.alldone} total tasks:${this.todoList.length}`);
      }
     
   }

@@ -5,12 +5,14 @@
   <div *ngFor="let todo of todoList">
         <div *ngIf="todo.complete">
           <input (change)="completeTask(todo)" type="checkbox" />
-          <span class="is-complete">  {{todo.title}} </span>
+          <span class="is-complete">  
+            <input [(ngModel)]= "todo.title" placeholder="title"  />
+          </span>
           <button (click)=Delete(todo)>x</button>
         </div>  
         <div *ngIf="!todo.complete">
           <input (change)="completeTask(todo)" type="checkbox" />
-          {{todo.title}}
+            <input [(ngModel)]= "todo.title" placeholder="title"  />
           <button (click)=Delete(todo)>x</button>
         </div>
   </div>
